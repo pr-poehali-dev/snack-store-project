@@ -3,46 +3,42 @@ import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/ece62345-0ec3-4424-9f92-15fb3d2f395d/files/14daf86b-3c89-43fe-9927-fe22e955d0f4.jpg";
 
-const PRODUCTS = [
-  {
-    id: 1, name: "Фуэт иберийский", category: "Мясные деликатесы",
-    price: 1890, oldPrice: 2200, weight: "150г",
-    badge: "Хит", image: HERO_IMAGE,
-    desc: "Выдержанная колбаса из свинины иберийской породы с пряным ароматом",
-  },
-  {
-    id: 2, name: "Тартюф де Бургонь", category: "Сыры",
-    price: 2450, oldPrice: null, weight: "200г",
-    badge: "Новинка", image: HERO_IMAGE,
-    desc: "Мягкий французский сыр с трюфелем, нежная текстура и аромат леса",
-  },
-  {
-    id: 3, name: "Микс орехов Deluxe", category: "Орехи и снеки",
-    price: 890, oldPrice: null, weight: "250г",
-    badge: null, image: HERO_IMAGE,
-    desc: "Отборные кешью, макадамия, пекан и миндаль с морской солью",
-  },
-  {
-    id: 4, name: "Оливки Каламата", category: "Средиземноморье",
-    price: 650, oldPrice: 780, weight: "180г",
-    badge: "Скидка", image: HERO_IMAGE,
-    desc: "Греческие оливки в оливковом масле с розмарином и тимьяном",
-  },
-  {
-    id: 5, name: "Крекеры с пармезаном", category: "Выпечка",
-    price: 490, oldPrice: null, weight: "120г",
-    badge: null, image: HERO_IMAGE,
-    desc: "Хрустящие крекеры ручной работы с 24-месячным пармезаном",
-  },
-  {
-    id: 6, name: "Икра Белуги", category: "Морепродукты",
-    price: 8900, oldPrice: null, weight: "50г",
-    badge: "Premium", image: HERO_IMAGE,
-    desc: "Черная икра осетровых рыб высшего сорта, производство России",
-  },
+const GROUPS = [
+  { id: "meat", name: "Мясные деликатесы", subtitle: "Хамон, фуэт, прошутто", image: HERO_IMAGE, desc: "Выдержанные колбасы и хамон из Испании, Италии и Франции" },
+  { id: "cheese", name: "Сыры", subtitle: "Выдержанные, мягкие, с плесенью", image: HERO_IMAGE, desc: "Французские, итальянские и швейцарские сыры от лучших фермеров" },
+  { id: "nuts", name: "Орехи и снеки", subtitle: "Премиальные миксы", image: HERO_IMAGE, desc: "Отборные орехи и хрустящие закуски ручной обжарки" },
+  { id: "med", name: "Средиземноморье", subtitle: "Оливки, масла, антипасти", image: HERO_IMAGE, desc: "Вкус южного солнца — оливки, песто, вяленые томаты" },
+  { id: "bakery", name: "Выпечка", subtitle: "Крекеры и гриссини", image: HERO_IMAGE, desc: "Хрустящая основа для идеальной закусочной тарелки" },
+  { id: "seafood", name: "Морепродукты", subtitle: "Икра, рыба, деликатесы", image: HERO_IMAGE, desc: "Чёрная и красная икра, копчёные деликатесы премиум-класса" },
 ];
 
-const CATEGORIES = ["Все", "Мясные деликатесы", "Сыры", "Орехи и снеки", "Средиземноморье", "Выпечка", "Морепродукты"];
+const PRODUCTS = [
+  { id: 1, group: "meat", name: "Фуэт иберийский", subcategory: "Колбасы", price: 1890, oldPrice: 2200, weight: "150г", badge: "Хит", image: HERO_IMAGE, desc: "Выдержанная колбаса из свинины иберийской породы" },
+  { id: 7, group: "meat", name: "Хамон Серрано", subcategory: "Хамон", price: 3400, oldPrice: null, weight: "200г", badge: "Premium", image: HERO_IMAGE, desc: "Испанский хамон 18 месяцев выдержки" },
+  { id: 8, group: "meat", name: "Прошутто ди Парма", subcategory: "Хамон", price: 2890, oldPrice: null, weight: "150г", badge: null, image: HERO_IMAGE, desc: "Классическое итальянское вяленое мясо" },
+  { id: 9, group: "meat", name: "Чоризо острый", subcategory: "Колбасы", price: 1290, oldPrice: 1500, weight: "180г", badge: "Скидка", image: HERO_IMAGE, desc: "Испанская колбаса с копчёной паприкой" },
+
+  { id: 2, group: "cheese", name: "Тартюф де Бургонь", subcategory: "С плесенью", price: 2450, oldPrice: null, weight: "200г", badge: "Новинка", image: HERO_IMAGE, desc: "Мягкий французский сыр с трюфелем" },
+  { id: 10, group: "cheese", name: "Пармезан 24 мес.", subcategory: "Выдержанные", price: 1890, oldPrice: null, weight: "250г", badge: null, image: HERO_IMAGE, desc: "Король сыров из региона Эмилия-Романья" },
+  { id: 11, group: "cheese", name: "Бри де Мо", subcategory: "Мягкие", price: 1450, oldPrice: null, weight: "200г", badge: null, image: HERO_IMAGE, desc: "Классический мягкий французский сыр" },
+  { id: 12, group: "cheese", name: "Горгонзола Дольче", subcategory: "С плесенью", price: 1690, oldPrice: 1900, weight: "200г", badge: "Скидка", image: HERO_IMAGE, desc: "Нежный итальянский сыр с голубой плесенью" },
+
+  { id: 3, group: "nuts", name: "Микс орехов Deluxe", subcategory: "Миксы", price: 890, oldPrice: null, weight: "250г", badge: null, image: HERO_IMAGE, desc: "Кешью, макадамия, пекан и миндаль с морской солью" },
+  { id: 13, group: "nuts", name: "Кешью жареный", subcategory: "Орехи", price: 690, oldPrice: null, weight: "200г", badge: null, image: HERO_IMAGE, desc: "Хрустящий кешью со средиземноморскими травами" },
+  { id: 14, group: "nuts", name: "Чипсы из батата", subcategory: "Чипсы", price: 390, oldPrice: null, weight: "100г", badge: "Новинка", image: HERO_IMAGE, desc: "Натуральные овощные чипсы без масла" },
+
+  { id: 4, group: "med", name: "Оливки Каламата", subcategory: "Оливки", price: 650, oldPrice: 780, weight: "180г", badge: "Скидка", image: HERO_IMAGE, desc: "Греческие оливки с розмарином и тимьяном" },
+  { id: 15, group: "med", name: "Песто из базилика", subcategory: "Соусы", price: 590, oldPrice: null, weight: "180г", badge: null, image: HERO_IMAGE, desc: "Классический лигурийский соус с кедровыми орехами" },
+  { id: 16, group: "med", name: "Вяленые томаты", subcategory: "Антипасти", price: 790, oldPrice: null, weight: "200г", badge: null, image: HERO_IMAGE, desc: "Сладкие томаты в оливковом масле с травами" },
+
+  { id: 5, group: "bakery", name: "Крекеры с пармезаном", subcategory: "Крекеры", price: 490, oldPrice: null, weight: "120г", badge: null, image: HERO_IMAGE, desc: "Хрустящие крекеры с 24-месячным пармезаном" },
+  { id: 17, group: "bakery", name: "Гриссини классик", subcategory: "Гриссини", price: 290, oldPrice: null, weight: "150г", badge: null, image: HERO_IMAGE, desc: "Тонкие итальянские хлебные палочки" },
+  { id: 18, group: "bakery", name: "Крекеры с розмарином", subcategory: "Крекеры", price: 490, oldPrice: null, weight: "120г", badge: "Хит", image: HERO_IMAGE, desc: "Хрустящие крекеры с морской солью и розмарином" },
+
+  { id: 6, group: "seafood", name: "Икра Белуги", subcategory: "Икра", price: 8900, oldPrice: null, weight: "50г", badge: "Premium", image: HERO_IMAGE, desc: "Чёрная икра осетровых высшего сорта" },
+  { id: 19, group: "seafood", name: "Икра лососёвая", subcategory: "Икра", price: 1890, oldPrice: null, weight: "150г", badge: null, image: HERO_IMAGE, desc: "Натуральная икра дикого лосося" },
+  { id: 20, group: "seafood", name: "Лосось холодного копчения", subcategory: "Рыба", price: 1290, oldPrice: 1500, weight: "150г", badge: "Скидка", image: HERO_IMAGE, desc: "Норвежский лосось традиционного копчения" },
+];
 
 const ORDERS = [
   { id: "SVR-2841", date: "08 мая 2026", status: "Доставлен", total: 4230, items: 3 },
@@ -56,7 +52,8 @@ export default function Index() {
   const [page, setPage] = useState<Page>("home");
   const [mobileMenu, setMobileMenu] = useState(false);
   const [cart, setCart] = useState<number[]>([]);
-  const [activeCategory, setActiveCategory] = useState("Все");
+  const [activeGroup, setActiveGroup] = useState<string | null>(null);
+  const [activeSub, setActiveSub] = useState("Все");
   const [accountTab, setAccountTab] = useState<"profile" | "orders" | "favorites" | "addresses">("profile");
   const [cartOpen, setCartOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -77,9 +74,21 @@ export default function Index() {
     return sum + p.price * count;
   }, 0);
 
-  const filteredProducts = activeCategory === "Все"
-    ? PRODUCTS
-    : PRODUCTS.filter(p => p.category === activeCategory);
+  const groupProducts = activeGroup ? PRODUCTS.filter(p => p.group === activeGroup) : [];
+  const subcategories = ["Все", ...Array.from(new Set(groupProducts.map(p => p.subcategory)))];
+  const filteredProducts = activeSub === "Все" ? groupProducts : groupProducts.filter(p => p.subcategory === activeSub);
+  const currentGroup = GROUPS.find(g => g.id === activeGroup);
+  const groupCount = (id: string) => PRODUCTS.filter(p => p.group === id).length;
+
+  const openGroup = (id: string) => {
+    setActiveGroup(id);
+    setActiveSub("Все");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const backToGroups = () => {
+    setActiveGroup(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const navItems: { label: string; page: Page }[] = [
     { label: "Главная", page: "home" },
@@ -92,6 +101,7 @@ export default function Index() {
   const navigate = (p: Page) => {
     setPage(p);
     setMobileMenu(false);
+    if (p !== "catalog") setActiveGroup(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -213,8 +223,24 @@ export default function Index() {
 
       {/* PAGES */}
       <main className="pt-16">
-        {page === "home" && <HomePage navigate={navigate} addToCart={addToCart} cart={cart} favorites={favorites} toggleFavorite={toggleFavorite} />}
-        {page === "catalog" && <CatalogPage activeCategory={activeCategory} setActiveCategory={setActiveCategory} filteredProducts={filteredProducts} addToCart={addToCart} cart={cart} favorites={favorites} toggleFavorite={toggleFavorite} />}
+        {page === "home" && <HomePage navigate={navigate} openGroup={openGroup} addToCart={addToCart} cart={cart} favorites={favorites} toggleFavorite={toggleFavorite} groupCount={groupCount} />}
+        {page === "catalog" && (
+          <CatalogPage
+            activeGroup={activeGroup}
+            currentGroup={currentGroup}
+            subcategories={subcategories}
+            activeSub={activeSub}
+            setActiveSub={setActiveSub}
+            filteredProducts={filteredProducts}
+            openGroup={openGroup}
+            backToGroups={backToGroups}
+            addToCart={addToCart}
+            cart={cart}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+            groupCount={groupCount}
+          />
+        )}
         {page === "about" && <AboutPage />}
         {page === "delivery" && <DeliveryPage />}
         {page === "contacts" && <ContactsPage />}
@@ -281,12 +307,14 @@ export default function Index() {
 }
 
 // ─── HOME PAGE ─────────────────────────────────────────────
-function HomePage({ navigate, addToCart, cart, favorites, toggleFavorite }: {
+function HomePage({ navigate, openGroup, addToCart, cart, favorites, toggleFavorite, groupCount }: {
   navigate: (p: Page) => void;
+  openGroup: (id: string) => void;
   addToCart: (id: number) => void;
   cart: number[];
   favorites: number[];
   toggleFavorite: (id: number) => void;
+  groupCount: (id: string) => number;
 }) {
   return (
     <div>
@@ -372,16 +400,33 @@ function HomePage({ navigate, addToCart, cart, favorites, toggleFavorite }: {
         </div>
       </section>
 
-      {/* CATEGORIES */}
+      {/* GROUPS */}
       <section className="container mx-auto px-6 py-16">
-        <p className="font-golos text-xs tracking-widest uppercase text-gold mb-2">Ассортимент</p>
-        <h2 className="font-cormorant text-5xl font-light mb-10">Категории</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {CATEGORIES.filter(c => c !== "Все").map(cat => (
-            <button key={cat} onClick={() => navigate("catalog")} className="relative h-32 bg-card border border-border hover:border-gold transition-all group overflow-hidden">
-              <img src={HERO_IMAGE} alt={cat} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity" />
-              <div className="relative flex items-center justify-center h-full">
-                <span className="font-cormorant text-xl font-light">{cat}</span>
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <p className="font-golos text-xs tracking-widest uppercase text-gold mb-2">Ассортимент</p>
+            <h2 className="font-cormorant text-5xl font-light">Группы товаров</h2>
+          </div>
+          <button onClick={() => navigate("catalog")} className="font-golos text-xs tracking-widest uppercase text-muted-foreground hover:text-gold transition-colors flex items-center gap-2">
+            Все группы <Icon name="ArrowRight" size={14} />
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {GROUPS.slice(0, 6).map((g, i) => (
+            <button
+              key={g.id}
+              onClick={() => { navigate("catalog"); openGroup(g.id); }}
+              className="relative h-48 bg-card border border-border hover:border-gold transition-all group overflow-hidden text-left opacity-0 animate-fade-in-up"
+              style={{ animationDelay: `${i * 0.08}s`, animationFillMode: "forwards" }}
+            >
+              <img src={g.image} alt={g.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="relative h-full flex flex-col justify-between p-5">
+                <span className="font-golos text-[10px] tracking-widest uppercase text-gold">{groupCount(g.id)} позиций</span>
+                <div>
+                  <h3 className="font-cormorant text-2xl font-light">{g.name}</h3>
+                  <p className="font-golos text-xs text-muted-foreground mt-1">{g.subtitle}</p>
+                </div>
               </div>
             </button>
           ))}
@@ -392,38 +437,116 @@ function HomePage({ navigate, addToCart, cart, favorites, toggleFavorite }: {
 }
 
 // ─── CATALOG PAGE ──────────────────────────────────────────
-function CatalogPage({ activeCategory, setActiveCategory, filteredProducts, addToCart, cart, favorites, toggleFavorite }: {
-  activeCategory: string;
-  setActiveCategory: (c: string) => void;
+function CatalogPage({ activeGroup, currentGroup, subcategories, activeSub, setActiveSub, filteredProducts, openGroup, backToGroups, addToCart, cart, favorites, toggleFavorite, groupCount }: {
+  activeGroup: string | null;
+  currentGroup: typeof GROUPS[0] | undefined;
+  subcategories: string[];
+  activeSub: string;
+  setActiveSub: (s: string) => void;
   filteredProducts: typeof PRODUCTS;
+  openGroup: (id: string) => void;
+  backToGroups: () => void;
   addToCart: (id: number) => void;
   cart: number[];
   favorites: number[];
   toggleFavorite: (id: number) => void;
+  groupCount: (id: string) => number;
 }) {
+  // GROUPS VIEW
+  if (!activeGroup) {
+    return (
+      <div className="container mx-auto px-6 py-12">
+        <div className="mb-10">
+          <p className="font-golos text-xs tracking-widest uppercase text-gold mb-2">Магазин</p>
+          <h1 className="font-cormorant text-5xl font-light mb-3">Группы товаров</h1>
+          <p className="font-golos text-sm text-muted-foreground max-w-xl">
+            Выберите категорию и откройте для себя коллекцию деликатесов
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {GROUPS.map((g, i) => (
+            <button
+              key={g.id}
+              onClick={() => openGroup(g.id)}
+              className="group relative h-80 bg-card border border-border hover:border-gold transition-all overflow-hidden text-left opacity-0 animate-fade-in-up"
+              style={{ animationDelay: `${i * 0.06}s`, animationFillMode: "forwards" }}
+            >
+              <img src={g.image} alt={g.name} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+              <div className="relative h-full flex flex-col justify-between p-6">
+                <div className="flex items-start justify-between">
+                  <span className="font-golos text-[10px] tracking-widest uppercase text-gold border border-gold/40 px-2 py-1">
+                    {groupCount(g.id)} позиций
+                  </span>
+                  <Icon name="ArrowUpRight" size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-opacity" fallback="ArrowRight" />
+                </div>
+                <div>
+                  <h3 className="font-cormorant text-3xl font-light mb-1">{g.name}</h3>
+                  <p className="font-golos text-xs tracking-widest uppercase text-gold mb-3">{g.subtitle}</p>
+                  <p className="font-golos text-xs text-muted-foreground leading-relaxed">{g.desc}</p>
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // GROUP DETAIL VIEW
   return (
-    <div className="container mx-auto px-6 py-12">
-      <div className="mb-10">
-        <p className="font-golos text-xs tracking-widest uppercase text-gold mb-2">Магазин</p>
-        <h1 className="font-cormorant text-5xl font-light">Каталог</h1>
-      </div>
-      <div className="flex flex-wrap gap-2 mb-10 pb-6 border-b border-border">
-        {CATEGORIES.map(cat => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-1.5 font-golos text-xs tracking-widest uppercase transition-all border ${
-              activeCategory === cat ? "bg-gold text-background border-gold" : "border-border text-muted-foreground hover:border-gold hover:text-gold"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((p, i) => (
-          <ProductCard key={p.id} product={p} addToCart={addToCart} cart={cart} favorites={favorites} toggleFavorite={toggleFavorite} delay={i * 0.05} />
-        ))}
+    <div>
+      {/* Group hero */}
+      <section className="relative h-72 overflow-hidden">
+        <img src={currentGroup?.image} alt={currentGroup?.name} className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
+        <div className="relative container mx-auto px-6 h-full flex flex-col justify-between py-8">
+          {/* Breadcrumbs */}
+          <div className="flex items-center gap-2 font-golos text-xs tracking-widest uppercase">
+            <button onClick={backToGroups} className="text-muted-foreground hover:text-gold transition-colors flex items-center gap-2">
+              <Icon name="ChevronLeft" size={14} /> Все группы
+            </button>
+            <span className="text-muted-foreground">/</span>
+            <span className="text-gold">{currentGroup?.name}</span>
+          </div>
+          <div>
+            <p className="font-golos text-xs tracking-widest uppercase text-gold mb-2">{currentGroup?.subtitle}</p>
+            <h1 className="font-cormorant text-5xl md:text-6xl font-light">{currentGroup?.name}</h1>
+            <p className="font-golos text-sm text-muted-foreground mt-3 max-w-xl">{currentGroup?.desc}</p>
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-6 py-12">
+        {/* Subcategory filters */}
+        {subcategories.length > 2 && (
+          <div className="flex flex-wrap gap-2 mb-10 pb-6 border-b border-border">
+            {subcategories.map(sub => (
+              <button
+                key={sub}
+                onClick={() => setActiveSub(sub)}
+                className={`px-4 py-1.5 font-golos text-xs tracking-widest uppercase transition-all border ${
+                  activeSub === sub ? "bg-gold text-background border-gold" : "border-border text-muted-foreground hover:border-gold hover:text-gold"
+                }`}
+              >
+                {sub}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="flex items-center justify-between mb-6">
+          <p className="font-golos text-xs tracking-widest uppercase text-muted-foreground">
+            Найдено: <span className="text-gold">{filteredProducts.length}</span>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProducts.map((p, i) => (
+            <ProductCard key={p.id} product={p} addToCart={addToCart} cart={cart} favorites={favorites} toggleFavorite={toggleFavorite} delay={i * 0.05} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -454,7 +577,7 @@ function ProductCard({ product: p, addToCart, cart, favorites, toggleFavorite, d
         </button>
       </div>
       <div className="p-5">
-        <p className="font-golos text-[10px] tracking-widest uppercase text-gold mb-1">{p.category}</p>
+        <p className="font-golos text-[10px] tracking-widest uppercase text-gold mb-1">{p.subcategory}</p>
         <h3 className="font-cormorant text-xl font-medium mb-2">{p.name}</h3>
         <p className="font-golos text-xs text-muted-foreground leading-relaxed mb-3">{p.desc}</p>
         <p className="font-golos text-xs text-muted-foreground mb-4">{p.weight}</p>
