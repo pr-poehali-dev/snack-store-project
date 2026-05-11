@@ -4,42 +4,39 @@
 
 @layer base {
   :root {
-    --background: 30 8% 6%;
-    --foreground: 42 20% 92%;
+    --background: 40 30% 97%;
+    --foreground: 30 10% 15%;
 
-    --card: 30 8% 9%;
-    --card-foreground: 42 20% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 30 8% 9%;
-    --popover-foreground: 42 20% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
 
-    --primary: 42 65% 68%;
-    --primary-foreground: 30 8% 6%;
+    --primary: 35 55% 45%;
+    --primary-foreground: 40 30% 97%;
 
-    --secondary: 30 8% 13%;
-    --secondary-foreground: 42 20% 92%;
+    --secondary: 40 20% 93%;
+    --secondary-foreground: 30 10% 15%;
 
-    --muted: 30 8% 13%;
-    --muted-foreground: 42 12% 55%;
+    --muted: 40 20% 93%;
+    --muted-foreground: 30 8% 45%;
 
-    --accent: 42 65% 68%;
-    --accent-foreground: 30 8% 6%;
+    --accent: 35 55% 45%;
+    --accent-foreground: 40 30% 97%;
 
     --destructive: 0 62% 50%;
-    --destructive-foreground: 42 20% 92%;
+    --destructive-foreground: 40 30% 97%;
 
-    --border: 30 8% 16%;
-    --input: 30 8% 13%;
-    --ring: 42 65% 68%;
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 35 55% 45%;
 
     --radius: 0.25rem;
 
-    --gold: 42 65% 68%;
-    --gold-light: 42 55% 80%;
-    --gold-dark: 35 60% 45%;
-    --dark-bg: 30 8% 6%;
-    --dark-card: 30 8% 9%;
-    --dark-surface: 30 8% 13%;
+    --gold: 35 55% 45%;
+    --gold-light: 38 50% 60%;
+    --gold-dark: 30 60% 30%;
   }
 }
 
@@ -94,10 +91,10 @@
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(var(--dark-bg));
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--gold-dark));
+  background: hsl(var(--gold));
   border-radius: 2px;
 }
 
@@ -202,7 +199,7 @@
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(60, 40, 20, 0.12);
 }
 
 .divider-gold {

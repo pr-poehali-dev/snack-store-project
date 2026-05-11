@@ -212,7 +212,7 @@ export default function Index() {
                   <span className="font-golos text-sm text-muted-foreground">Итого</span>
                   <span className="font-cormorant text-2xl text-gold">{cartTotal.toLocaleString()} ₽</span>
                 </div>
-                <button className="w-full py-3 bg-gold text-background font-golos text-sm tracking-widest uppercase hover:bg-gold-light transition-colors">
+                <button className="w-full py-3 bg-gold text-background font-golos text-sm tracking-widest uppercase hover:bg-gold-dark transition-colors">
                   Оформить заказ
                 </button>
               </div>
@@ -335,7 +335,7 @@ function HomePage({ navigate, openGroup, addToCart, cart, favorites, toggleFavor
             Деликатесы из лучших регионов мира. Тщательный отбор, строгий контроль качества, доставка по Москве и России.
           </p>
           <div className="flex gap-4 opacity-0 animate-fade-in-up delay-400" style={{ animationFillMode: "forwards" }}>
-            <button onClick={() => navigate("catalog")} className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-light transition-colors">
+            <button onClick={() => navigate("catalog")} className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-dark transition-colors">
               В каталог
             </button>
             <button onClick={() => navigate("about")} className="px-8 py-3 border border-gold text-gold font-golos text-xs tracking-widest uppercase hover:bg-gold hover:text-background transition-all">
@@ -772,7 +772,7 @@ function ContactsPage() {
               <label className="font-golos text-[10px] tracking-widest uppercase text-muted-foreground block mb-2">Сообщение</label>
               <textarea className="w-full bg-card border border-border px-4 py-3 font-golos text-sm focus:outline-none focus:border-gold transition-colors resize-none h-32" placeholder="Ваш вопрос или пожелание..." />
             </div>
-            <button type="button" className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-light transition-colors">
+            <button type="button" className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-dark transition-colors">
               Отправить сообщение
             </button>
           </form>
@@ -837,10 +837,10 @@ function AccountPage({ isLoggedIn, setIsLoggedIn, loginView, setLoginView, accou
             )}
             {loginView === "login" && (
               <div className="text-right">
-                <button type="button" className="font-golos text-xs text-gold hover:text-gold-light transition-colors">Забыли пароль?</button>
+                <button type="button" className="font-golos text-xs text-gold hover:text-gold-dark transition-colors">Забыли пароль?</button>
               </div>
             )}
-            <button type="submit" className="w-full py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-light transition-colors mt-2">
+            <button type="submit" className="w-full py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-dark transition-colors mt-2">
               {loginView === "login" ? "Войти" : "Создать аккаунт"}
             </button>
           </form>
@@ -936,7 +936,7 @@ function AccountPage({ isLoggedIn, setIsLoggedIn, loginView, setLoginView, accou
                 <label className="font-golos text-[10px] tracking-widest uppercase text-muted-foreground block mb-2">Дата рождения</label>
                 <input defaultValue="1990-05-15" type="date" className="w-full bg-card border border-border px-4 py-3 font-golos text-sm focus:outline-none focus:border-gold transition-colors" />
               </div>
-              <button type="button" className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-light transition-colors">
+              <button type="button" className="px-8 py-3 bg-gold text-background font-golos text-xs tracking-widest uppercase hover:bg-gold-dark transition-colors">
                 Сохранить
               </button>
             </form>
@@ -1049,7 +1049,7 @@ function AccountPage({ isLoggedIn, setIsLoggedIn, loginView, setLoginView, accou
                 <p className="font-cormorant text-xl mb-2">{addr.label}</p>
                 <p className="font-golos text-sm text-muted-foreground">{addr.address}</p>
                 <div className="flex gap-3 mt-4">
-                  <button type="button" className="font-golos text-xs text-gold hover:text-gold-light transition-colors">Изменить</button>
+                  <button type="button" className="font-golos text-xs text-gold hover:text-gold-dark transition-colors">Изменить</button>
                   <button type="button" className="font-golos text-xs text-muted-foreground hover:text-foreground transition-colors">Удалить</button>
                 </div>
               </div>
